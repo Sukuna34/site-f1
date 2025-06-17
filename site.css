@@ -1,0 +1,232 @@
+/* Reset e configurações básicas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e1e38, #0b142c, #270f78);
+  color: white;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Container principal */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Títulos principais */
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(255, 107, 107, 0.3);
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.8;
+}
+
+/* Seções */
+.section {
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.section-title::before,
+.section-title::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff6b6b, transparent);
+}
+
+/* Botões de filtro */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: rgba(255, 107, 107, 0.3);
+  border-color: #ff6b6b;
+  transform: translateY(-2px);
+}
+
+/* Grid de pilotos */
+.pilots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+/* Cards dos pilotos */
+.pilot-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.pilot-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1);
+}
+
+.pilot-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Cards das lendas com estilo especial */
+.pilot-card.legend {
+  background: rgba(255, 215, 0, 0.15);
+  border-color: rgba(255, 215, 0, 0.3);
+}
+
+.pilot-card.legend::before {
+  background: linear-gradient(90deg, #ffd700, #ffed4e, #fff59d);
+}
+
+/* Informações do piloto */
+.pilot-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pilot-country {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 15px;
+  color: #4ecdc4;
+}
+
+/* Estatísticas */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 12px;
+}
+
+.stat {
+  text-align: center;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.stat:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.stat-icon {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.stat-value {
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: block;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  display: block;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .pilots-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .filter-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .pilot-card {
+    padding: 20px;
+  }
+  
+  .container {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .pilot-name {
+    font-size: 1.2rem;
+  }
+  
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

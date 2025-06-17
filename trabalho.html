@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pilotos de F1 - Lendas e Atualidade</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🏎️ Pilotos de Fórmula 1</h1>
+    <p class="subtitle">Lendas do passado e estrelas do presente</p>
+
+    <div class="filter-buttons">
+      <button class="filter-btn active" onclick="showAll()">Todos</button>
+      <button class="filter-btn" onclick="showLegends()">Lendas</button>
+      <button class="filter-btn" onclick="showCurrent()">Atuais</button>
+    </div>
+
+    <section class="section">
+      <h2 class="section-title">🏆 Lendas da F1</h2>
+      <div class="pilots-grid" id="legends">
+        
+        <article class="pilot-card legend" data-category="legend">
+          <img src="senna.jpg">
+          <div class="pilot-name">Ayrton Senna 🇧🇷</div>
+          <div class="pilot-country">Brasil – McLaren / Williams</div>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-icon">🏆</div>
+              <div class="stat-value">3</div>
+              <div class="stat-label">Títulos</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🥈</div>
+              <div class="stat-value">80</div>
+              <div class="stat-label">Pódios</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🏁</div>
+              <div class="stat-value">41</div>
+              <div class="stat-label">Vitórias</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pilot-card legend" data-category="legend">
+          <img src="schumaker.jpg">
+          <div class="pilot-name">Michael Schumacher 🇩🇪</div>
+          <div class="pilot-country">Alemanha – Ferrari / Benetton</div>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-icon">🏆</div>
+              <div class="stat-value">7</div>
+              <div class="stat-label">Títulos</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🥈</div>
+              <div class="stat-value">155</div>
+              <div class="stat-label">Pódios</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🏁</div>
+              <div class="stat-value">91</div>
+              <div class="stat-label">Vitórias</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pilot-card legend" data-category="legend">
+          <img src="vettel.jpg">
+          <div class="pilot-name">Sebastian Vettel 🇩🇪</div>
+          <div class="pilot-country">Alemanha – Red Bull / Ferrari / Aston Martin</div>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-icon">🏆</div>
+              <div class="stat-value">4</div>
+              <div class="stat-label">Títulos</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🥈</div>
+              <div class="stat-value">122</div>
+              <div class="stat-label">Pódios</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🏁</div>
+              <div class="stat-value">53</div>
+              <div class="stat-label">Vitórias</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pilot-card legend" data-category="legend">
+          <img src="niki.jpg">
+          <div class="pilot-name">Niki Lauda 🇦🇹</div>
+          <div class="pilot-country">Áustria – Ferrari / McLaren / Brabham</div>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-icon">🏆</div>
+              <div class="stat-value">3</div>
+              <div class="stat-label">Títulos</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🥈</div>
+              <div class="stat-value">54</div>
+              <div class="stat-label">Pódios</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🏁</div>
+              <div class="stat-value">25</div>
+              <div class="stat-label">Vitórias</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">🏎️ Pilotos Atuais</h2>
+      <div class="pilots-grid" id="current">
+
+        <article class="pilot-card" data-category="current">
+          <img src="max.jpg">
+          <div class="pilot-name">Max Verstappen 🇳🇱</div>
+          <div class="pilot-country">Países Baixos – Red Bull Racing</div>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-icon">🏆</div>
+              <div class="stat-value">3</div>
+              <div class="stat-label">Títulos</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🥈</div>
+              <div class="stat-value">100+</div>
+              <div class="stat-label">Pódios</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🏁</div>
+              <div class="stat-value">60+</div>
+              <div class="stat-label">Vitórias</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pilot-card" data-category="current">
+          <img src="perez.jpg">
+          <div class="pilot-name">Sergio Pérez 🇲🇽</div>
+          <div class="pilot-country">México – Red Bull Racing</div>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-icon">🏆</div>
+              <div class="stat-value">0</div>
+              <div class="stat-label">Títulos</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🥈</div>
+              <div class="stat-value">35+</div>
+              <div class="stat-label">Pódios</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🏁</div>
+              <div class="stat-value">6</div>
+              <div class="stat-label">Vitórias</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pilot-card" data-category="current">
+          <img src="lewis.jpg">
+          <div class="pilot-name">Lewis Hamilton 🇬🇧</div>
+          <div class="pilot-country">Reino Unido – Mercedes / Ferrari (2025)</div>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-icon">🏆</div>
+              <div class="stat-value">7</div>
+              <div class="stat-label">Títulos</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🥈</div>
+              <div class="stat-value">197+</div>
+              <div class="stat-label">Pódios</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🏁</div>
+              <div class="stat-value">103</div>
+              <div class="stat-label">Vitórias</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pilot-card" data-category="current">
+          <img src="russel.jpg">
+          <div class="pilot-name">George Russell 🇬🇧</div>
+          <div class="pilot-country">Reino Unido – Mercedes</div>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-icon">🏆</div>
+              <div class="stat-value">0</div>
+              <div class="stat-label">Títulos</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🥈</div>
+              <div class="stat-value">11+</div>
+              <div class="stat-label">Pódios</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🏁</div>
+              <div class="stat-value">1</div>
+              <div class="stat-label">Vitórias</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pilot-card" data-category="current">
+          <img src="leclerc.jpg">
+          <div class="pilot-name">Charles Leclerc 🇲🇨</div>
+          <div class="pilot-country">Mônaco – Ferrari</div>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-icon">🏆</div>
+              <div class="stat-value">0</div>
+              <div class="stat-label">Títulos</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🥈</div>
+              <div class="stat-value">30+</div>
+              <div class="stat-label">Pódios</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🏁</div>
+              <div class="stat-value">5</div>
+              <div class="stat-label">Vitórias</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pilot-card" data-category="current">
+          <img src="sainz.jpg">
+          <div class="pilot-name">Carlos Sainz 🇪🇸</div>
+          <div class="pilot-country">Espanha – Ferrari</div>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-icon">🏆</div>
+              <div class="stat-value">0</div>
+              <div class="stat-label">Títulos</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🥈</div>
+              <div class="stat-value">18+</div>
+              <div class="stat-label">Pódios</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🏁</div>
+              <div class="stat-value">3</div>
+              <div class="stat-label">Vitórias</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pilot-card" data-category="current">
+          <img src="norris.jpg">
+          <div class="pilot-name">Lando Norris 🇬🇧</div>
+          <div class="pilot-country">Reino Unido – McLaren</div>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-icon">🏆</div>
+              <div class="stat-value">0</div>
+              <div class="stat-label">Títulos</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🥈</div>
+              <div class="stat-value">15+</div>
+              <div class="stat-label">Pódios</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🏁</div>
+              <div class="stat-value">1</div>
+              <div class="stat-label">Vitórias</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pilot-card" data-category="current">
+          <img src="piastri.jpg">
+          <div class="pilot-name">Oscar Piastri 🇦🇺</div>
+          <div class="pilot-country">Austrália – McLaren</div>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-icon">🏆</div>
+              <div class="stat-value">0</div>
+              <div class="stat-label">Títulos</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🥈</div>
+              <div class="stat-value">2</div>
+              <div class="stat-label">Pódios</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🏁</div>
+              <div class="stat-value">0</div>
+              <div class="stat-label">Vitórias</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pilot-card" data-category="current">
+          <img src="stroll.jpg">
+          <div class="pilot-name">Lance Stroll 🇨🇦</div>
+          <div class="pilot-country">Canadá – Aston Martin</div>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-icon">🏆</div>
+              <div class="stat-value">0</div>
+              <div class="stat-label">Títulos</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🥈</div>
+              <div class="stat-value">3</div>
+              <div class="stat-label">Pódios</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🏁</div>
+              <div class="stat-value">0</div>
+              <div class="stat-label">Vitórias</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pilot-card" data-category="current">
+          <img src="zhou.jpg">
+          <div class="pilot-name">Zhou Guanyu 🇨🇳</div>
+          <div class="pilot-country">China – Kick Sauber</div>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-icon">🏆</div>
+              <div class="stat-value">0</div>
+              <div class="stat-label">Títulos</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🥈</div>
+              <div class="stat-value">0</div>
+              <div class="stat-label">Pódios</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🏁</div>
+              <div class="stat-value">0</div>
+              <div class="stat-label">Vitórias</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pilot-card" data-category="current">
+          <img src="fofo.jpg">
+          <div class="pilot-name">Yuki Tsunoda 🇯🇵</div>
+          <div class="pilot-country">Japão – Red Bull</div>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-icon">🏆</div>
+              <div class="stat-value">0</div>
+              <div class="stat-label">Títulos</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🥈</div>
+              <div class="stat-value">0</div>
+              <div class="stat-label">Pódios</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🏁</div>
+              <div class="stat-value">0</div>
+              <div class="stat-label">Vitórias</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pilot-card" data-category="current">
+          <img src="danniel.jpg">
+          <div class="pilot-name">Daniel Ricciardo 🇦🇺</div>
+          <div class="pilot-country">Austrália – Red Bull</div>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-icon">🏆</div>
+              <div class="stat-value">0</div>
+              <div class="stat-label">Títulos</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🥈</div>
+              <div class="stat-value">32</div>
+              <div class="stat-label">Pódios</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🏁</div>
+              <div class="stat-value">8</div>
+              <div class="stat-label">Vitórias</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pilot-card" data-category="current">
+          <img src="ocon.jpg">
+          <div class="pilot-name">Esteban Ocon 🇫🇷</div>
+          <div class="pilot-country">França – Alpine</div>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-icon">🏆</div>
+              <div class="stat-value">0</div>
+              <div class="stat-label">Títulos</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🥈</div>
+              <div class="stat-value">3</div>
+              <div class="stat-label">Pódios</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🏁</div>
+              <div class="stat-value">1</div>
+              <div class="stat-label">Vitórias</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pilot-card" data-category="current">
+          <img src="bottas.jpg">
+          <div class="pilot-name">Valtteri Bottas 🇫🇮</div>
+          <div class="pilot-country">Finlândia – Kick Sauber</div>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-icon">🏆</div>
+              <div class="stat-value">0</div>
+              <div class="stat-label">Títulos</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🥈</div>
+              <div class="stat-value">67</div>
+              <div class="stat-label">Pódios</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🏁</div>
+              <div class="stat-value">10</div>
+              <div class="stat-label">Vitórias</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pilot-card" data-category="current">
+          <img src="alemão.jpg">
+          <div class="pilot-name">Kevin Magnussen 🇩🇰</div>
+          <div class="pilot-country">Dinamarca – Haas</div>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-icon">🏆</div>
+              <div class="stat-value">0</div>
+              <div class="stat-label">Títulos</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🥈</div>
+              <div class="stat-value">1</div>
+              <div class="stat-label">Pódios</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🏁</div>
+              <div class="stat-value">0</div>
+              <div class="stat-label">Vitórias</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="pilot-card" data-category="current">
+          <img src="nico.jpg">
+          <div class="pilot-name">Nico Hülkenberg 🇩🇪</div>
+          <div class="pilot-country">Alemanha – Haas</div>
+          <div class="stats">
+            <div class="stat">
+              <div class="stat-icon">🏆</div>
+              <div class="stat-value">0</div>
+              <div class="stat-label">Títulos</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🥈</div>
+              <div class="stat-value">0</div>
+              <div class="stat-label">Pódios</div>
+            </div>
+            <div class="stat">
+              <div class="stat-icon">🏁</div>
+              <div class="stat-value">0</div>
+              <div class="stat-label">Vitórias</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </div>
+
+  <script src="site.js"></script>
+</body>
+</html>
